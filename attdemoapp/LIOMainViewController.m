@@ -104,7 +104,6 @@
     // Do any additional setup after loading the view.
     
     self.accountSkills = [NSMutableArray array];
-    /*
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dsl-care9-mobile-native-english"}];
     [self.accountSkills addObject:@{@"account" : @"1771134", @"skill" : @"wireless-mobile-english"}];
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dslcare13-mobile-ios-english"}];
@@ -116,12 +115,6 @@
     [self.accountSkills addObject:@{@"account" : @"1771134", @"skill" : @"wireless-mobile-ios-english"}];
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dsl-care13-mobile-native-english"}];
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dslcare9-mobile-ios-english"}];
-     */
-    
-    [self.accountSkills addObject:@{@"account" : @"P17453170", @"skill" : @"mobile"}];
-    [self.accountSkills addObject:@{@"account" : @"P17453170", @"skill" : @"sales"}];
-    [self.accountSkills addObject:@{@"account" : @"61010431", @"skill" : @"mobile"}];
-    [self.accountSkills addObject:@{@"account" : @"61010431", @"skill" : @"otherskill"}];
     
     for (NSDictionary *accountSkill in self.accountSkills)
     {
