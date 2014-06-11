@@ -430,11 +430,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "attdemoapp/attdemoapp-Prefix.pch";
 				INFOPLIST_FILE = "attdemoapp/attdemoapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LookIO-Libraries/iOS",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "21C3B792-3B30-434F-871B-34DA01E398C9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -447,11 +449,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "attdemoapp/attdemoapp-Prefix.pch";
 				INFOPLIST_FILE = "attdemoapp/attdemoapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LookIO-Libraries/iOS",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "21C3B792-3B30-434F-871B-34DA01E398C9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

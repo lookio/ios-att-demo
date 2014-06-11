@@ -100,7 +100,16 @@
     self.chatButton.enabled = NO;
     self.chatButton.alpha = 0.3;
     [self.view addSubview:self.chatButton];
-
+    
+    UILabel *detailsLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 200, self.view.bounds.size.width - 40, 30)];
+    detailsLabel.textColor = [UIColor blackColor];
+    detailsLabel.textAlignment = UITextAlignmentCenter;
+    detailsLabel.text = [NSString stringWithFormat:@"%@ / %@", self.account, self.skill];
+    detailsLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    detailsLabel.numberOfLines = 0;
+    [detailsLabel sizeToFit];
+    
+    [self.view addSubview:detailsLabel];
     
     self.navigationItem.title = @"Chat Page";
 }
