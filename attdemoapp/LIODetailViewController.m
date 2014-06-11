@@ -35,9 +35,6 @@
 
 - (void)updateChatButtonState
 {
-    if ([[LIOLookIOManager sharedLookIOManager] enabled])
-        [[LIOLookIOManager sharedLookIOManager] setInvitationShown];
-    
     // Button state
     NSString *eventName = [NSString stringWithFormat:@"button-%@-%@", self.account, self.skill];
     if ([[LIOLookIOManager sharedLookIOManager] isChatEnabledForSkill:self.skill forAccount:self.account])
@@ -46,6 +43,7 @@
         self.chatButton.enabled = YES;
         
         [[LIOLookIOManager sharedLookIOManager] reportEvent:eventName withData:@"1"];
+        [[LIOLookIOManager sharedLookIOManager] setInvitationShown];
     }
     else
     {
@@ -53,6 +51,7 @@
         self.chatButton.enabled = NO;
         
         [[LIOLookIOManager sharedLookIOManager] reportEvent:eventName withData:@"0"];
+        [[LIOLookIOManager sharedLookIOManager] setInvitationNotShown];
     }
 }
 
