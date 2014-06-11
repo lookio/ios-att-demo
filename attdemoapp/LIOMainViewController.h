@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LIOMainViewController : UIViewController
+// LPMobile
+#import "LIOLookIOManager.h"
+
+@interface LIOMainViewController : UIViewController <LIOLookIOManagerDelegate>
 
 @end

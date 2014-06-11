@@ -1,0 +1,3 @@
+[submodule "LookIO-Libraries"]
+	path = LookIO-Libraries
+	url = git@github.com:lookio/LookIO-Libraries.git

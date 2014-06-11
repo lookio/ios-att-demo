@@ -10,4 +10,10 @@
 
 @interface LIODetailViewController : UIViewController
 
+@property (nonatomic, copy) NSString *skill;
+@property (nonatomic, copy) NSString *account;
+
+- (id)initWithAccount:(NSString *)account skill:(NSString *)skill;
+- (void)updateChatButtonState;
+
 @end

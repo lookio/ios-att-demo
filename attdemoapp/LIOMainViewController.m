@@ -8,14 +8,29 @@
 
 #import "LIOMainViewController.h"
 
+// ViewControllers
+
+#import "LIODetailViewController.h"
+
 @interface LIOMainViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *accountSkills;
 
+@property (nonatomic, strong) LIODetailViewController *detailViewController;
+
 @end
 
 @implementation LIOMainViewController
+
+#pragma mark -
+#pragma mark LIOLookIOManagerDelegate
+
+- (void)lookioManager:(LIOLookIOManager *)manager didChangeEnabled:(bool)enabled forSkill:(NSString *)skill forAccount:(NSString *)account
+{
+    if ([self.detailViewController.skill isEqualToString:skill] && [self.detailViewController.account isEqualToString:account])
+        [self.detailViewController updateChatButtonState];
+}
 
 #pragma mark -
 #pragma mark UITableViewDelegate/DataSource Methods
@@ -67,12 +82,29 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (0 == indexPath.section)
+    {
+        NSDictionary *accountSkill = (NSDictionary *)[self.accountSkills objectAtIndex:indexPath.row];
+        self.detailViewController = [[LIODetailViewController alloc] initWithAccount:[accountSkill objectForKey:@"account"] skill:[accountSkill objectForKey:@"skill"]];
+        [self.navigationController pushViewController:self.detailViewController animated:YES];
+    }
+    if (1 == indexPath.section)
+    {
+        [[LIOLookIOManager sharedLookIOManager] reportEvent:@"OrderValue" withData:@"8000"];
+        [[[UIAlertView alloc] initWithTitle:@"OrderValue Reported" message:@"Reported OrderValue event with 8000" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];        
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.accountSkills = [NSMutableArray array];
+    /*
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dsl-care9-mobile-native-english"}];
     [self.accountSkills addObject:@{@"account" : @"1771134", @"skill" : @"wireless-mobile-english"}];
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dslcare13-mobile-ios-english"}];
@@ -84,12 +116,26 @@
     [self.accountSkills addObject:@{@"account" : @"1771134", @"skill" : @"wireless-mobile-ios-english"}];
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dsl-care13-mobile-native-english"}];
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dslcare9-mobile-ios-english"}];
-        
+     */
+    
+    [self.accountSkills addObject:@{@"account" : @"P17453170", @"skill" : @"mobile"}];
+    [self.accountSkills addObject:@{@"account" : @"P17453170", @"skill" : @"sales"}];
+    [self.accountSkills addObject:@{@"account" : @"61010431", @"skill" : @"mobile"}];
+    [self.accountSkills addObject:@{@"account" : @"61010431", @"skill" : @"otherskill"}];
+    
+    for (NSDictionary *accountSkill in self.accountSkills)
+    {
+        NSString *eventName = [NSString stringWithFormat:@"button-%@-%@", [accountSkill objectForKey:@"account"], [accountSkill objectForKey:@"skill"]];
+        [[LIOLookIOManager sharedLookIOManager] reportEvent:eventName withData:@"-1"];
+    }
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    
+    self.navigationItem.title = @"AT&T Demo App";
 }
 
 @end

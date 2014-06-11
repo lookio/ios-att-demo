@@ -21,6 +21,17 @@
 		A7B05C371948F09F005D4F8B /* attdemoappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B05C361948F09F005D4F8B /* attdemoappTests.m */; };
 		A7B05C421948F142005D4F8B /* LIOMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B05C411948F142005D4F8B /* LIOMainViewController.m */; };
 		A7B05C471948F5DC005D4F8B /* LIODetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B05C461948F5DC005D4F8B /* LIODetailViewController.m */; };
+		A7B05C4B1948FA89005D4F8B /* libLookIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C481948FA89005D4F8B /* libLookIO.a */; };
+		A7B05C4C1948FA89005D4F8B /* LookIO.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7B05C4A1948FA89005D4F8B /* LookIO.bundle */; };
+		A7B05C4E1948FB05005D4F8B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C4D1948FB05005D4F8B /* CoreText.framework */; };
+		A7B05C501948FB09005D4F8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C4F1948FB09005D4F8B /* Accelerate.framework */; };
+		A7B05C521948FB0E005D4F8B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C511948FB0E005D4F8B /* MapKit.framework */; };
+		A7B05C541948FB12005D4F8B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C531948FB12005D4F8B /* CFNetwork.framework */; };
+		A7B05C561948FB19005D4F8B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C551948FB19005D4F8B /* SystemConfiguration.framework */; };
+		A7B05C581948FB3E005D4F8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C571948FB3E005D4F8B /* QuartzCore.framework */; };
+		A7B05C5A1948FB44005D4F8B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C591948FB44005D4F8B /* libz.dylib */; };
+		A7B05C5C1948FB4A005D4F8B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C5B1948FB4A005D4F8B /* CoreTelephony.framework */; };
+		A7B05C5E1948FB50005D4F8B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B05C5D1948FB50005D4F8B /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +65,18 @@
 		A7B05C411948F142005D4F8B /* LIOMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIOMainViewController.m; sourceTree = "<group>"; };
 		A7B05C451948F5DC005D4F8B /* LIODetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIODetailViewController.h; sourceTree = "<group>"; };
 		A7B05C461948F5DC005D4F8B /* LIODetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIODetailViewController.m; sourceTree = "<group>"; };
+		A7B05C481948FA89005D4F8B /* libLookIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLookIO.a; path = "LookIO-Libraries/iOS/libLookIO.a"; sourceTree = "<group>"; };
+		A7B05C491948FA89005D4F8B /* LIOLookIOManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIOLookIOManager.h; path = "LookIO-Libraries/iOS/LIOLookIOManager.h"; sourceTree = "<group>"; };
+		A7B05C4A1948FA89005D4F8B /* LookIO.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LookIO.bundle; path = "LookIO-Libraries/iOS/LookIO.bundle"; sourceTree = "<group>"; };
+		A7B05C4D1948FB05005D4F8B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A7B05C4F1948FB09005D4F8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A7B05C511948FB0E005D4F8B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A7B05C531948FB12005D4F8B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A7B05C551948FB19005D4F8B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A7B05C571948FB3E005D4F8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A7B05C591948FB44005D4F8B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A7B05C5B1948FB4A005D4F8B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A7B05C5D1948FB50005D4F8B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +84,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B05C5E1948FB50005D4F8B /* AudioToolbox.framework in Frameworks */,
+				A7B05C5C1948FB4A005D4F8B /* CoreTelephony.framework in Frameworks */,
+				A7B05C5A1948FB44005D4F8B /* libz.dylib in Frameworks */,
+				A7B05C581948FB3E005D4F8B /* QuartzCore.framework in Frameworks */,
+				A7B05C561948FB19005D4F8B /* SystemConfiguration.framework in Frameworks */,
+				A7B05C541948FB12005D4F8B /* CFNetwork.framework in Frameworks */,
+				A7B05C521948FB0E005D4F8B /* MapKit.framework in Frameworks */,
+				A7B05C501948FB09005D4F8B /* Accelerate.framework in Frameworks */,
+				A7B05C4E1948FB05005D4F8B /* CoreText.framework in Frameworks */,
 				A7B05C081948F09F005D4F8B /* CoreGraphics.framework in Frameworks */,
 				A7B05C0A1948F09F005D4F8B /* UIKit.framework in Frameworks */,
+				A7B05C4B1948FA89005D4F8B /* libLookIO.a in Frameworks */,
 				A7B05C061948F09F005D4F8B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +136,15 @@
 		A7B05C041948F09F005D4F8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7B05C5D1948FB50005D4F8B /* AudioToolbox.framework */,
+				A7B05C5B1948FB4A005D4F8B /* CoreTelephony.framework */,
+				A7B05C591948FB44005D4F8B /* libz.dylib */,
+				A7B05C571948FB3E005D4F8B /* QuartzCore.framework */,
+				A7B05C551948FB19005D4F8B /* SystemConfiguration.framework */,
+				A7B05C531948FB12005D4F8B /* CFNetwork.framework */,
+				A7B05C511948FB0E005D4F8B /* MapKit.framework */,
+				A7B05C4F1948FB09005D4F8B /* Accelerate.framework */,
+				A7B05C4D1948FB05005D4F8B /* CoreText.framework */,
 				A7B05C051948F09F005D4F8B /* Foundation.framework */,
 				A7B05C071948F09F005D4F8B /* CoreGraphics.framework */,
 				A7B05C091948F09F005D4F8B /* UIKit.framework */,
@@ -158,6 +200,9 @@
 		A7B05C441948F1EB005D4F8B /* LPMobile */ = {
 			isa = PBXGroup;
 			children = (
+				A7B05C481948FA89005D4F8B /* libLookIO.a */,
+				A7B05C491948FA89005D4F8B /* LIOLookIOManager.h */,
+				A7B05C4A1948FA89005D4F8B /* LookIO.bundle */,
 			);
 			name = LPMobile;
 			sourceTree = "<group>";
@@ -240,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B05C241948F09F005D4F8B /* Images.xcassets in Resources */,
+				A7B05C4C1948FA89005D4F8B /* LookIO.bundle in Resources */,
 				A7B05C101948F09F005D4F8B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +430,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "attdemoapp/attdemoapp-Prefix.pch";
 				INFOPLIST_FILE = "attdemoapp/attdemoapp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LookIO-Libraries/iOS",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,6 +447,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "attdemoapp/attdemoapp-Prefix.pch";
 				INFOPLIST_FILE = "attdemoapp/attdemoapp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LookIO-Libraries/iOS",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

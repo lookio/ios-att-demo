@@ -8,6 +8,11 @@
 
 #import "LIOAppDelegate.h"
 
+
+// LPMobile
+#import "LIOLookIOManager.h"
+
+
 // View Controllers
 #import "LIOMainViewController.h"
 
@@ -17,11 +22,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LIOMainViewController alloc] init]];
+    LIOMainViewController *mainViewController = [[LIOMainViewController alloc] init];
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     [self.window makeKeyAndVisible];
     
-//    [[LIOLookIOManager sharedLookIOManager] performSelector:@selector(setStagingMode)];
-//    [[LIOLookIOManager sharedLookIOManager] performSetupWithDelegate:self.viewController];
+    [[LIOLookIOManager sharedLookIOManager] performSelector:@selector(setStagingMode)];
+    [[LIOLookIOManager sharedLookIOManager] performSetupWithDelegate:mainViewController];
 
     return YES;
 }
