@@ -106,7 +106,6 @@
     self.accountSkills = [NSMutableArray array];
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dslcare13-mobile-ios-english"}];
     [self.accountSkills addObject:@{@"account" : @"1771134", @"skill" : @"service_olam-mobile-ios-english"}];
-    [self.accountSkills addObject:@{@"account" : @"59255004", @"skill" : @"mobile"}];
     [self.accountSkills addObject:@{@"account" : @"1771134", @"skill" : @"wireless-mobile-ios-english"}];
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dslcare9-mobile-ios-english"}];
     
