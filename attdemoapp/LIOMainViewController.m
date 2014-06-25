@@ -26,7 +26,7 @@
 #pragma mark -
 #pragma mark LIOLookIOManagerDelegate
 
-- (void)lookioManager:(LIOLookIOManager *)manager didChangeEnabled:(bool)enabled forSkill:(NSString *)skill forAccount:(NSString *)account
+- (void)lookioManager:(LIOLookIOManager *)manager didChangeEnabled:(BOOL)enabled forSkill:(NSString *)skill forAccount:(NSString *)account
 {
     if ([self.detailViewController.skill isEqualToString:skill] && [self.detailViewController.account isEqualToString:account])
         [self.detailViewController updateChatButtonState];
