@@ -27,7 +27,6 @@
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     [self.window makeKeyAndVisible];
     
-    [[LIOLookIOManager sharedLookIOManager] performSelector:@selector(setStagingMode)];
     [[LIOLookIOManager sharedLookIOManager] performSetupWithDelegate:mainViewController];
 
     return YES;

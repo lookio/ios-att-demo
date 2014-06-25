@@ -519,6 +519,7 @@
 				A7B05C3C1948F09F005D4F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7B05C3D1948F09F005D4F8B /* Build configuration list for PBXNativeTarget "attdemoappTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +528,7 @@
 				A7B05C3F1948F09F005D4F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
