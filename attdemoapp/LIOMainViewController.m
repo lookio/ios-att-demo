@@ -32,6 +32,11 @@
         [self.detailViewController updateChatButtonState];
 }
 
+- (NSString *)lookIOManagerAppIdOverride:(LIOLookIOManager *)aManager
+{
+    return @"com.att.ods.myWireless";
+}
+
 #pragma mark -
 #pragma mark UITableViewDelegate/DataSource Methods
 
@@ -104,10 +109,10 @@
     // Do any additional setup after loading the view.
     
     self.accountSkills = [NSMutableArray array];
-    [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dslcare13-mobile-ios-english"}];
     [self.accountSkills addObject:@{@"account" : @"1771134", @"skill" : @"service_olam-mobile-ios-english"}];
-    [self.accountSkills addObject:@{@"account" : @"1771134", @"skill" : @"wireless-mobile-ios-english"}];
     [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dslcare9-mobile-ios-english"}];
+    [self.accountSkills addObject:@{@"account" : @"1771134", @"skill" : @"wireless-mobile-ios-english"}];
+    [self.accountSkills addObject:@{@"account" : @"10188673", @"skill" : @"dslcare13-mobile-ios-english"}];
     
     for (NSDictionary *accountSkill in self.accountSkills)
     {
