@@ -32,11 +32,6 @@
         [self.detailViewController updateChatButtonState];
 }
 
-- (NSString *)lookIOManagerAppIdOverride:(LIOLookIOManager *)aManager
-{
-    return @"com.att.ods.myWireless";
-}
-
 #pragma mark -
 #pragma mark UITableViewDelegate/DataSource Methods
 
